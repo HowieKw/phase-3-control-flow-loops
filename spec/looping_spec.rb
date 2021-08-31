@@ -10,6 +10,17 @@ describe '#happy_new_year' do
 
 end
 
+
+def happy_new_year
+  i = 10
+  while i > 0
+    puts "#{i}"
+    i -= 1
+  end
+    puts "Happy New Year!"
+  end
+
+
 describe '#fizzbuzz_printer' do
   
   it 'uses `puts` to print numbers from 1 to 100, replacing multiples of 3 and 5 with Fizz and Buzz' do
@@ -18,6 +29,23 @@ describe '#fizzbuzz_printer' do
   end
 
 end
+
+
+def fizzbuzz_printer
+  (1..100).each do |num|
+    if num % 3 == 0 && num % 5 == 0
+      puts "FizzBuzz"
+    elsif num % 3 == 0
+      puts "Fizz"
+    elsif num % 5 == 0
+      puts "Buzz"
+    else
+      puts num
+    end
+  end
+end
+
+
 
 describe '#reverse_string' do
   
@@ -32,4 +60,13 @@ describe '#reverse_string' do
     reverse_string('hello')
   end
   
+end
+
+
+def reverse_string(str)
+  reversedstr = ""
+    str.length.times do |i|
+      reversedstr = str[i] + reversedstr
+  end
+  reversedstr
 end
